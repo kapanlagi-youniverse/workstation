@@ -21,11 +21,17 @@
 
 ### You're ready to provisioning with
 
+    ./all.sh workstation.yml
+
+Which expands to:
+
     ansible-galaxy install -r ~/Workspace/workstation/requirements.yml
     ansible-playbook -i 127.0.0.1, ~/Workspace/workstation/workstation.yml -vvvv
 
+If you are provisioning a laptop you will want to add:
+
+    ./all.sh tommy.yml --extra-vars "laptop=true"
 
 #### Misc ToDo:
 [ ] Workstation machine locking automatically
 [ ] Check Garuda's setup Ubuntu setup script, should use workstation
-_
